@@ -5,7 +5,8 @@ const connectDB = require("./config/db");
 const app = express();
 
 const allowedOrigins = [
-  process.env.CLIENT_URL,
+  "https://crafts-hub-frontend.vercel.app",  // hardcoded — no env var risk
+  process.env.CLIENT_URL,                    // still supports custom overrides
   "http://localhost:5173",
   "http://localhost:3000",
 ].filter(Boolean);
